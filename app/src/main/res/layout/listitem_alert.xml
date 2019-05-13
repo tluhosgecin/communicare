@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_item_alert_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary">
+
+    <TextView
+        android:id="@+id/textview_item_alert_bed"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text="@null"
+        android:textColor="@color/primary_accent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_item_alert_description"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center_vertical"
+        android:text="@string/listitem_description"
+        android:textColor="@color/primary_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textview_item_alert_bed"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_item_alert_time"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text="@null"
+        android:textAlignment="center"
+        android:textColor="@color/primary_text_red"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageview_item_alert_divider_2"
+        android:layout_width="1px"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/content_pipe_divider"
+        app:layout_constraintEnd_toStartOf="@+id/textview_item_alert_time"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ly_linear_vertical_divider" />
+
+    <Button
+        android:id="@+id/button_item_alert_resolve"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ly_rounded_border_red"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text="@string/listitem_resolve"
+        android:textAlignment="center"
+        android:textColor="@color/primary_text_red"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/button_item_alert_assist"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_item_alert_bed" />
+
+    <Button
+        android:id="@+id/button_item_alert_assist"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ly_rounded_filled_cyan"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text="@string/listitem_communicate"
+        android:textAlignment="center"
+        android:textColor="@color/primary_text_beige"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_item_alert_resolve"
+        app:layout_constraintTop_toBottomOf="@+id/textview_item_alert_bed" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_body_footer"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_item_alert_resolve">
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

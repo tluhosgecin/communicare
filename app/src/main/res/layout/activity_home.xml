@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_home_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".Activity.HomeActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_home_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_home_navigation">
+
+        <Button
+            android:id="@+id/button_home_alerts"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/ly_rounded_filled_cyan"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/home_alerts"
+            android:textAlignment="center"
+            android:textColor="@color/primary_text_beige"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/button_home_assist"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_home_assist"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/ly_rounded_filled_cyan"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/home_communicate"
+            android:textAlignment="center"
+            android:textColor="@color/primary_text_beige"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/button_home_beds"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_home_alerts" />
+
+        <Button
+            android:id="@+id/button_home_beds"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/ly_rounded_filled_cyan"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/home_beds"
+            android:textAlignment="center"
+            android:textColor="@color/primary_text_beige"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_home_assist" />
+
+        <TextView
+            android:id="@+id/textview_home_count"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ly_rounded_filled_red"
+            android:clickable="false"
+            android:elevation="10dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:linksClickable="false"
+            android:longClickable="false"
+            android:minWidth="50dp"
+            android:text="@null"
+            android:textAlignment="center"
+            android:textColor="@color/primary_text_beige"
+            android:textIsSelectable="false"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/button_home_alerts"
+            app:layout_constraintEnd_toEndOf="@+id/button_home_alerts"
+            app:layout_constraintTop_toTopOf="@+id/button_home_alerts"
+            tools:ignore="UnusedAttribute" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_home_navigation"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:background="@drawable/ly_rectangle_end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textview_home_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/location_home"
+            android:textAlignment="center"
+            android:textColor="@color/primary_text_red"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

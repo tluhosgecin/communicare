@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hci.prototype.communicare">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:name=".Application.Launcher"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/application_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.App"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning,InnerclassSeparator">
+        <activity
+            android:name=".Activity.BreathActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activity.PainActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activity.WaterClosetActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activity.BodyActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activity.AddBedActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activity.BedsActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activity.HomeActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activity.CategoryActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activity.AlertsActivity"
+            tools:ignore="InnerclassSeparator" />
+
+        <service
+            android:name=".Service.AlertService"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="true"
+            android:permission="android.permission.FOREGROUND_SERVICE"
+            tools:ignore="UnusedAttribute" />
+
+        <receiver
+            android:name=".Receiver.AlertReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="true"
+            android:permission="android.permission.BROADCAST_SMS"
+            tools:ignore="InnerclassSeparator,UnusedAttribute">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Activity.SplashActivity"
+            tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

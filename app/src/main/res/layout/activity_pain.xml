@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_pain_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".Activity.PainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_pain_navigation"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:background="@drawable/ly_rectangle_end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/button_pain_back"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="25dp"
+            android:background="@drawable/ic_arrow_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_pain_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/location_pain_items"
+            android:textAlignment="center"
+            android:textColor="@color/primary_text_red"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_pain_menu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/ic_brand_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_pain_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/primary"
+        app:layout_constraintBottom_toTopOf="@+id/layout_pain_footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_pain_navigation">
+
+        <Button
+            android:id="@+id/button_pain_dull"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ly_rounded_filled_red"
+            android:drawableEnd="@drawable/ly_button_speaker_icon"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/pain_dull_en"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/primary_text_beige"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_pain_sharp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_pain_sharp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ly_rounded_filled_red"
+            android:drawableEnd="@drawable/ly_button_speaker_icon"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/pain_sharp_en"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/primary_text_beige"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_pain_burn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_pain_dull" />
+
+        <Button
+            android:id="@+id/button_pain_burn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ly_rounded_filled_red"
+            android:drawableEnd="@drawable/ly_button_speaker_icon"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/pain_burn_en"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/primary_text_beige"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_pain_nolist"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_pain_sharp" />
+
+        <Button
+            android:id="@+id/button_pain_nolist"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/ly_rounded_filled_red"
+            android:drawableEnd="@drawable/ly_button_speaker_icon"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/pain_nolist_en"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/primary_text_beige"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_pain_burn" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_pain_footer"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/ly_rectangle_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageButton
+            android:id="@+id/button_pain_english"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/ly_rounded_border_cyan"
+            app:srcCompat="@drawable/ic_flag_gb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_pain_eesti"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/button_pain_eesti"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/ly_rounded_border_cyan"
+            app:srcCompat="@drawable/ic_flag_ee"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_pain_english"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
